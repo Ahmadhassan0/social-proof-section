@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+
+--Very-Dark-Magenta: hsl(300, 43%, 22%);
+--Soft-Pink: hsl(333, 80%, 67%);
+
+--Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+--Light-Grayish-Magenta: hsl(300, 24%, 96%);
+--White: hsl(0, 0%, 100%);
+
+/* - Font size: 15px */
+
+--ff-primary: 'League Spartan', sans-serif;
+--fw-regular: 400;
+--fw-medium: 500;
+--fw-bold: 700;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    color: var(--Very-Dark-Magenta);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.social-container {
+    width: min(80%, 90rem);
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin: auto;
+    gap: 4rem;
+}
+
+.social__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social__top__left_side {
+    width: 25rem;
+}
+
+.social__title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    word-spacing: -.2rem;
+    letter-spacing: -1px;
+}
+
+.social__desc {
+    opacity: .7;
+    line-height: 1.2;
+    font-weight: var(--fw-medium);
+}
+
+.social__top__right__side {
+    display: grid;
+    gap: 1rem;
+}
+
+.rating-box {
+    background: var(--Light-Grayish-Magenta);
+    display: flex;
+    width: 25rem;
+    padding: .7rem 1.6rem;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.rating-box > div {
+    margin-right: 1.5rem;
+}
+.rating-box img {
+    display: inline;
+    width: 1rem;
+    margin-right: .2rem;
+}
+
+.rating-box p {
+    font-weight: var(--fw-bold);
+}
+
+
+.rating__2 {
+    margin-left: 2rem;
+}
+
+.rating__3 {
+    margin-left: 4rem;
+}
+
+
+/* Social Proof bottom */
+.social__bottom {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.social__bottom .reviewer {
+    background: var(--Very-Dark-Magenta);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.reviewer .reviewer__profile__box {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.reviewer__profile__box img {
+    width: 2rem;
+    border-radius: 50%;;
+}
+
+.reviewer__profile__box .reviewer__name {
+    font-weight: var(--fw-medium);
+}
+
+.reviewer__profile__box .reviewer__status {
+    color: var(--Soft-Pink);
+    font-size: .9rem;
+    margin-top: .25rem;
+    opacity: .9;
+}
+
+.reviewer .reviewer__desc {
+    line-height: 1.2;
+    font-size: .9rem;
+}
+
+.reviewer__2 {
+    transform: translateY(1rem);
+}
+
+.reviewer__3 {
+    transform: translateY(2rem);
+}
+
+
+
+/* ====================
+Media Query(Tablets) 
+======================*/
+@media screen and (min-width: 36em) and (max-width: 48em) {
+
+    .social-container {
+        margin: 5rem auto;
+        gap: 2.5rem;
+    }
+
+    .social__top__left_side .social__title { 
+        line-height: .8;
+        font-size: 2.4rem;
+    }
+
+    .social__top__right__side {
+        width: 100%;
+    }
+
+    .rating-box  {
+        margin: 0;
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+    }
+
+    .social__bottom {
+        flex-direction: column;
+    }
+    .reviewer {
+        transform: translateY(0rem);
+    }
+}
+
+
+/* ====================
+Media Query(mobile) 
+======================*/
+@media screen and (max-width: 36em) {
+
+    .social-container {
+        margin: 3rem 1rem 5rem 1rem;
+        height: auto;
+        width: 90%;
+        gap: 2.5rem;
+    }
+
+    .social__top {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .social__top__left_side {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social__top .social__title {
+        font-size: 2rem;
+    }
+
+    .social__top__right__side {
+        width: 100%;
+    }
+
+    .rating-box  {
+        margin: 0;
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+    }
+
+    .social__bottom {
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+
+
